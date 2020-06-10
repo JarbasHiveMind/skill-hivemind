@@ -1,0 +1,58 @@
+{
+  "skillMetadata": {
+    "sections": [
+      {
+        "name": "HiveMind Credentials Manager",
+        "fields": [
+          {
+            "name": "client_name",
+            "type": "text",
+            "label": "human readable name",
+            "value": "client name here"
+          },
+          {
+            "name": "access_key",
+            "type": "text",
+            "label": "access key",
+            "value": "RESISTENCEisFUTILE"
+          },
+            {
+            "name": "crypto_key",
+            "type": "text",
+            "label": "encryption key",
+            "value": "resistanceISfutile"
+          },
+          {
+            "name": "add_kry",
+            "type": "checkbox",
+            "label": "add access key",
+            "value": "false"
+          },
+          {
+            "name": "delete_key",
+            "type": "checkbox",
+            "label": "revoke access key",
+            "value": "false"
+          }
+        ]
+      },
+        {
+        "name": "HiveMind Settings",
+        "fields": [
+          {
+            "name": "port",
+            "type": "number",
+            "label": "listen on port",
+            "value": "5678"
+          },
+          {
+            "name": "use_ssl",
+            "type": "checkbox",
+            "label": "use ssl",
+            "value": "true"
+          }
+        ]
+      }
+    ]
+  }
+}

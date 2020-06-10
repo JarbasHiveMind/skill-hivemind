@@ -1,0 +1,10 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=HiveMindCore
+Exec=mycroft-gui-app --hideTextInput --skill=skill-hivemind.jarbasskills.home
+Icon=icon.png
+Categories=VoiceApp
+StartupNotify=false
+X-DBUS-StartupType=None
+X-KDE-StartupNotify=false
