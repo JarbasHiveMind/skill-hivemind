@@ -35,9 +35,10 @@ class HiveMindSkill(FallbackSkill):
 
     # HiveMind
     def run(self, message):
-        self.settings["ssl"] = {"use_ssl": self.settings["use_ssl"]}
-        self.hivemind.load_config(self.settings)
-        self.hivemind.listen()
+        if self.settings["listen"]:
+            self.settings["ssl"] = {"use_ssl": self.settings["use_ssl"]}
+            self.hivemind.load_config(self.settings)
+            self.hivemind.listen()
         reactor.run(installSignalHandlers=False)
 
     def authorize_client(self, name, access_key="RESISTENCEisFUTILE",
@@ -64,7 +65,8 @@ class HiveMindSkill(FallbackSkill):
                 self.settings["crypto_key"]
             )
             self.speak_dialog("key_update")
-        if self.settings["port"] != self._old_settings["port"]:
+        if self.settings["port"] != self._old_settings["port"] or \
+                self.settings["listen"] != self._old_settings["listen"]:
             self.speak_dialog("need_reboot")
         self._old_settings = dict(self.settings)
 

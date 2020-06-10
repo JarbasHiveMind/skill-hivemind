@@ -39,6 +39,13 @@
         {
         "name": "HiveMind Settings",
         "fields": [
+
+          {
+            "name": "listen",
+            "type": "checkbox",
+            "label": "listen for connections",
+            "value": "true"
+          },
           {
             "name": "port",
             "type": "number",
