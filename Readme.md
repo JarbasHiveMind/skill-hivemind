@@ -8,8 +8,6 @@ Allows the HiveMind ecosystem to talk to a Mycroft instance
 
 ## Usage
 
-![](./hivemind.png)
-
 The following clients are available
 
 NOTE: verify your firewall rules
