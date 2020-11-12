@@ -3,9 +3,6 @@
 
 ![](./logo.png)
 
-**(not to be confused with [HiveSkill](https://github.com/JarbasHiveMind/HiveMind-hiveskill),
-the module that helps you integrate devices with HiveMind and Mycroft)**  
-
 Mycroft skill for [HiveMind-core](https://github.com/JarbasHiveMind/HiveMind-core)
 
 Allows the HiveMind ecosystem to talk to a Mycroft instance
