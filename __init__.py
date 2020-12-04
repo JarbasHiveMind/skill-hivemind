@@ -2,6 +2,7 @@ from mycroft.skills.core import FallbackSkill
 from mycroft.util import camel_case_split
 from jarbas_hive_mind import get_listener
 from jarbas_hive_mind.configuration import CONFIGURATION
+from jarbas_hive_mind.settings import DEFAULT_PORT
 from jarbas_hive_mind.database import ClientDatabase
 from twisted.internet import reactor
 
@@ -14,6 +15,22 @@ class HiveMindSkill(FallbackSkill):
             self.settings["priority"] = 50
         if "timeout" not in self.settings:
             self.settings["timeout"] = 15
+        if "port" not in self.settings:
+            self.settings["port"] = DEFAULT_PORT
+        if "listen" not in self.settings:
+            self.settings["listen"] = True
+        if "ssl" not in self.settings:
+            self.settings["ssl"] = True
+        if "access_key" not in self.settings:
+            self.settings["access_key"] = "RESISTENCEisFUTILE"
+        if "crypto_key" not in self.settings:
+            self.settings["crypto_key"] = "resistanceISfutile"
+        if "client_name" not in self.settings:
+            self.settings["client_name"] = "HiveMindSkill"
+        if "add_key" not in self.settings:
+            self.settings["add_key"] = False
+        if "revoke_key" not in self.settings:
+            self.settings["revoke_key"] = False
         for k in CONFIGURATION:
             if k not in self.settings:
                 self.settings[k] = CONFIGURATION[k]
